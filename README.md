@@ -49,6 +49,12 @@ Replace `next-project` with the project name you'd like to create, eg. `my-next-
 npx create-next-app next-project --use-npm --example "https://github.com/sandeep-shaw10/next-tailwind-template"
 ```
 
+OR 
+
+```
+npx create-next-app -e https://github.com/sandeep-shaw10/next-tailwind-template next-project
+```
+
 ## Get Inside Project Directory 📂
 ```
 cd next-project
@@ -102,7 +108,7 @@ useEffect(() => {
 - [x] Modern Tailwind CSS components
 - [x] Tailwind CSS Skeleton
 - [x] Examples with **getStaticPath** and **getStaticProps**
-- [ ] 🔴 **ISSUE**: Use of `any` keyword in TypeScript 
+<!-- - [ ] 🔴 **ISSUE**: Use of `any` keyword in TypeScript  -->
 
 <br/>
 

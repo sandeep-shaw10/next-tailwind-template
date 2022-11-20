@@ -11,8 +11,8 @@ const keyVal = 'my-app-theme'
 
 
 const useTheme = () => {
-    const [dark, setDark] = useState(false)
-    const toggleTheme: any = () => setDark((curVal) => {
+    const [dark, setDark] = useState<boolean>(false)
+    const toggleTheme: ()=>void = () => setDark((curVal) => {
         return !curVal
     })
 
@@ -44,7 +44,7 @@ const useTheme = () => {
             setDark(!dark)
         }
     }, [dark])
-    return [dark, toggleTheme]
+    return {dark, toggleTheme}
 }
 
 

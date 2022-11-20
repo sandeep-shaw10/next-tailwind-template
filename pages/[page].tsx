@@ -1,7 +1,19 @@
 import Testimonial from "../components/Skeleton/Testimonial";
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
+import { ParsedUrlQuery } from 'querystring'
 
 
-export default function Pages({ page }: any) {
+interface PageType {
+    page: string;
+}
+
+
+interface IParams extends ParsedUrlQuery {
+    page: string
+}
+
+
+const Pages: NextPage<PageType> = ({ page }) => {
     return (
         <div className='text-center'>
             <h1 className="text-3xl sm:text-5xl dark:text-gray-300 text-gray-700 mb-4">
@@ -28,17 +40,18 @@ export default function Pages({ page }: any) {
 }
 
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths<IParams> = async() => {
     const path = ['about', 'contact', 'reference', 'blog']
     const paths = path.map((pageName) => ({ params: { page: pageName } }));
     return { paths, fallback: false };
 }
 
-export async function getStaticProps({ params }: any) {
-    const page = params.page
+export const getStaticProps: GetStaticProps<PageType> = (context) => {
+    const { page } = context.params as IParams
     return {
-        props: {
-            page,
-        },
+        props: { page },
     };
 }
+
+
+export default Pages;

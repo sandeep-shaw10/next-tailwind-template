@@ -1,7 +1,19 @@
 import Graph from "../../components/Skeleton/Graph";
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
+import { ParsedUrlQuery } from 'querystring'
 
 
-export default function Info({ service }: any) {
+interface ServiceType {
+    service: string;
+}
+
+
+interface IParams extends ParsedUrlQuery {
+    service: string
+}
+
+
+const Info: NextPage<ServiceType> = ({ service }) => {
     return (
         <div className='text-center'>
             <h1 className="text-3xl sm:text-5xl dark:text-gray-300 text-gray-700 mb-4">
@@ -28,17 +40,20 @@ export default function Info({ service }: any) {
 }
 
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths<IParams> = async() => {
     const path = ['product', 'resource', 'developer', 'company']
     const paths = path.map((serviceName) => ({ params: { service: serviceName } }));
     return { paths, fallback: false };
 }
 
-export async function getStaticProps({ params }: any) {
-    const service = params.service
+export const getStaticProps: GetStaticProps<ServiceType> = (context) => {
+    const { service } = context.params as IParams
     return {
         props: {
             service,
         },
     };
 }
+
+
+export default Info;

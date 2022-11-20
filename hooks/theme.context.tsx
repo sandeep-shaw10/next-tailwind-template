@@ -2,17 +2,32 @@ import { createContext, useContext } from "react"
 import useTheme from './useTheme'
 
 
-// Create Context
-const ThemeContext = createContext<any>({
-    toggleTheme: ()=>{},
+type ThemeContextType = {
+    setTheme: ()=>void,
+    theme: boolean
+}
+
+
+const defaultThemeContext: ThemeContextType = {
+    setTheme: ()=>{},
     theme: false
-})
+}
+
+// Create Context
+const ThemeContext = createContext<ThemeContextType>(
+    defaultThemeContext
+)
 
 
-export function ThemeProvider(props: any){
-    const [theme, setTheme] = useTheme()
-    const value = { theme, setTheme }
-    return <ThemeContext.Provider value={value} {...props} />
+export const ThemeProvider = ({children}: { children: React.ReactNode }) => {
+    const {dark, toggleTheme} = useTheme()
+    const value = {
+        theme: dark,
+        setTheme: toggleTheme
+    }
+    return <ThemeContext.Provider value={value}>
+            {children}
+        </ThemeContext.Provider>
 }
 
 
