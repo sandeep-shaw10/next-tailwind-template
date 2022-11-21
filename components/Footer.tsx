@@ -70,7 +70,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="border-slate-500/25 border-scale-500 mt-32 flex justify-between border-t pt-8">
-                    <small className="small text-gray-300 ">© next-tailwind-template/{(new Date().getFullYear())}</small>
+                    <small className="small text-gray-400 ">© next-tailwind-template/{(new Date().getFullYear())}</small>
                     <small>
                         <div className="mb-3">
                             <div className="relative inline-block w-10 mr-2 align-middle select-none">
