@@ -44,11 +44,6 @@ To create a Next.js app with this template, open your terminal, `cd` into the di
 **✒️ Note**:
 Replace `next-project` with the project name you'd like to create, eg. `my-next-blog`.
 
-```
-npx create-next-app next-project --use-npm --example "https://github.com/sandeep-shaw10/next-tailwind-template"
-```
-
-OR 
 
 ```
 npx create-next-app -e https://github.com/sandeep-shaw10/next-tailwind-template next-project
