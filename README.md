@@ -6,8 +6,7 @@
 ![typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-
-<img src='./public/preview.gif' alt='preview' width='100%' />
+![banner](./public/banner.png)
 
 
 ![Version](https://img.shields.io/badge/version-v0.1.0-orange.svg)
@@ -65,6 +64,11 @@ cd next-project
 ```
 npm run dev
 ```
+
+<br/>
+
+
+<img src='./public/preview.gif' alt='preview' width='100%' />
 
 <br/>
 
