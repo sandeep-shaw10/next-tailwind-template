@@ -8,6 +8,7 @@
 
 ![banner](./public/banner.png)
 
+## [🟢 View Live](https://next-tailwind-template-three.vercel.app/)
 
 ![Version](https://img.shields.io/badge/version-v0.1.0-orange.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
