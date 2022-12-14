@@ -6,7 +6,7 @@
 ![typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-![banner](./public/banner.png)
+![banner](./public/banner.webp)
 
 ## [🟢 View Live](https://next-tailwind-template-three.vercel.app/)
 
